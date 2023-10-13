@@ -1,0 +1,111 @@
+#main_c {
+
+}
+#main_c .wrap {
+  width: 1280px;
+  display: grid;
+  grid-template-columns: 35% 65%;
+  align-items: center;
+}
+#main_c .wrap .txt {
+  padding-right: 90px;
+}
+#main_c .wrap .txt h3 {
+  font-size: 32px;
+  padding-bottom: 20px;
+}
+#main_c .wrap .txt p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+#main_c .wrap ul.list {
+  align-items: center;
+  justify-content: space-around;
+  /*! width: 100%; */
+}
+#main_c .wrap ul.list li {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+#main_c .wrap ul.list li::before{
+  content: "";
+  display: block;
+  width: 144px;
+  height: 144px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+#main_c .wrap ul.list li.pp1_one::before{
+  background-image: url(../img/ppl_1.png);
+}
+#main_c .wrap ul.list li.pp1_two::before{
+  background-image: url(../img/ppl_2.png);
+}
+#main_c .wrap ul.list li.pp1_three::before{
+  background-image: url(../img/ppl_3.png);
+}
+#main_c .wrap ul.list li.pp1_four::before{
+  background-image: url(../img/ppl_4.png);
+}
+#main_c .wrap ul.list li p {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 2.5;
+}
+/* mobile */
+#mobile_c{
+  display: none;
+}
+#mobile_c .wrap {
+  width: 1280px;
+  display: grid;
+  grid-template-columns: 35% 65%;
+  align-items: center;
+}
+#mobile_c .wrap .txt {
+  padding-right: 90px;
+}
+#mobile_c .wrap .txt h3 {
+  font-size: 32px;
+  padding-bottom: 20px;
+}
+#mobile_c .wrap .txt p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+#mobile_c .wrap ul.list {
+  align-items: center;
+  justify-content: space-around;
+  /*! width: 100%; */
+}
+#mobile_c .wrap ul.list li {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+#mobile_c .wrap ul.list li::before{
+  content: "";
+  display: block;
+  width: 144px;
+  height: 144px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+#mobile_c .wrap ul.list li.pp1_one::before{
+  background-image: url(../img/ppl_1.png);
+}
+#mobile_c .wrap ul.list li.pp1_two::before{
+  background-image: url(../img/ppl_2.png);
+}
+#mobile_c .wrap ul.list li.pp1_three::before{
+  background-image: url(../img/ppl_3.png);
+}
+#mobile_c .wrap ul.list li.pp1_four::before{
+  background-image: url(../img/ppl_4.png);
+}
+#mobile_c .wrap ul.list li p {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 2.5;
+}

@@ -1,0 +1,56 @@
+#main_e {
+
+}
+#main_e .wrap {
+  width: 1280px;
+}
+#main_e .wrap h2{
+  font-size: 32px;
+  font-weight:800; 
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+#main_e .wrap .total{
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-column-gap: 52px;
+}
+#main_e .wrap .imgbox {
+
+}
+#main_e .wrap .imgbox .main{
+  width: 736px;
+  height: 530px;
+}
+#main_e .wrap .textbox {
+  padding-left: 50px;
+  padding-right: 111px;
+}
+#main_e .wrap .textbox ul {
+  padding-top: 39px;
+}
+#main_e .wrap .textbox ul li {
+  display: grid;
+  grid-template-columns: 20% auto;
+  grid-template-rows: auto auto;
+  padding-bottom: 23px;
+  align-items: center;
+  cursor: pointer;
+}
+#main_e .wrap .textbox ul li img.icon {
+
+}
+#main_e .wrap .textbox ul li span {
+  font-size: 32px;
+  font-weight: 600;
+}
+#main_e .wrap .textbox ul li p {
+  font-size: 14px;
+  line-height: 1.5;
+  order: 3;
+  grid-column: 1 / span 2;
+}
+#main_e .wrap .textbox ul li:nth-child(1) p{
+  
+}

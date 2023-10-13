@@ -1,0 +1,212 @@
+#main_a {
+  /*! display: none; */
+}
+#main_a .wrap {
+  width: 1280px;
+  position: relative;
+}
+#main_a .wrap h2 {
+  text-align: center;
+  padding-bottom: 30px;
+  font-size: 35px;
+  font-weight: 700;
+}
+#main_a .wrap ul.list {
+  gap: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+#main_a .wrap ul.list li {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
+}
+#main_a .wrap ul.list li a {
+  color: #7A6D66;
+}
+#main_a .wrap ul.list li:nth-child(2) a{
+  
+}
+#main_a .wrap ul.list li a:hover{
+  color: #333;
+}
+#main_a .wrap .stuff{
+  padding-top: 80px;
+  overflow: hidden;
+  padding-bottom: 30px;
+}
+#main_a .wrap .stuff .item_a{
+}
+#main_a .wrap .stuff .item_b{
+  gap: 20px;
+}
+#main_a .wrap .stuff .item_c{
+  gap: 20px;  
+}
+#main_a .wrap .stuff .item_d{
+  gap: 20px;  
+}
+#main_a .wrap .stuff .item_e{
+  gap: 20px;  
+}
+#main_a .wrap .stuff article {
+  width: 289px;
+  height: 384px;
+  padding-right: 20px;
+}
+#main_a .wrap .stuff article a.more {
+}
+#main_a .wrap .stuff article a.more img {
+  width: 289px;
+  height: 289px;
+}
+#main_a .wrap .stuff article a.more h3 {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.8;
+}
+#main_a .wrap .stuff article p {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.8;
+}
+#main_a .wrap .stuff article p {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.8;
+}
+#main_a .wrap .stuff article span.price {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.8;
+  color: red;
+}
+#main_a .wrap .stuff article span.buy{
+  display: flex;
+  position: absolute;
+  bottom: 96px;
+  width: 309px;
+  padding: 5px;
+}
+#main_a .wrap .stuff article span.buy a{
+  border-radius: 10px;
+  background-color: black;
+  display: flex;
+  text-align: center;
+  line-height: 2.5;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+}
+#main_a .wrap .stuff article span.buy a.like{
+  font-size: 0;
+  background-image: url(../img/favorite.svg);
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 48px;
+  background-position: center;
+  margin-right: 8px;
+}
+#main_a .wrap .stuff article span.buy a.add{
+  color: white;
+  width: 211px;
+}
+#main_a .wrap a.button {
+  position: absolute;
+  left: calc(100% / 2 - 60px);
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  padding: 0 10px;
+  font-weight: 600;
+  transition: opacity 0.5s;
+}
+#main_a .wrap a.button:hover{
+  background: linear-gradient(to right, #6566D8, #EF8768);
+}
+
+/* 슬릭 옆으로 버튼 */
+
+/* main_a item */
+#main_a .wrap .stuff .slick-prev{
+  z-index: 1;
+  left: 10px;
+  top: 40%;
+}
+#main_a .wrap .stuff  .slick-next{
+  z-index: 1;
+  right: 10px;
+  top: 40%;
+}
+#main_a .wrap .stuff button.slick-prev::before {
+  content: "";
+  background-image: url(../img/arrow_back.svg);
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+#main_a .wrap .stuff button.slick-next::before {
+  content: "";
+  background-image: url(../img/arrow_forward.svg);
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+
+/* main_b item */
+#main_b .wrap .stuff .slick-prev{
+  z-index: 1;
+  left: 10px;
+  top: 40%;
+}
+#main_b .wrap .stuff  .slick-next{
+  z-index: 1;
+  right: 10px;
+  top: 40%;
+}
+#main_b .wrap .stuff button.slick-prev::before {
+  content: "";
+  background-image: url(../img/arrow_back.svg);
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+#main_b .wrap .stuff button.slick-next::before {
+  content: "";
+  background-image: url(../img/arrow_forward.svg);
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+/* main_d item */
+#main_d .wrap .stuff .slick-prev{
+  z-index: 1;
+  left: 10px;
+  top: 40%;
+}
+#main_d .wrap .stuff  .slick-next{
+  z-index: 1;
+  right: 10px;
+  top: 40%;
+}
+#main_d .wrap .stuff button.slick-prev::before {
+  content: "";
+  background-image: url(../img/arrow_back.svg);
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+#main_d .wrap .stuff button.slick-next::before {
+  content: "";
+  background-image: url(../img/arrow_forward.svg);
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}

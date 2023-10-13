@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PANTONE® USA |  Color Solutions, Trends, Guides & Tools</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/title.css">
+    <link rel="stylesheet" href="css/main_a.css">
+    <link rel="stylesheet" href="css/main_b.css">
+    <link rel="stylesheet" href="css/main_c.css">
+    <link rel="stylesheet" href="css/main_d.css">
+    <link rel="stylesheet" href="css/main_e.css">
+    <link rel="stylesheet" href="css/main_f.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Titillium+Web:wght@200;300;400;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- 제이쿼리 -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <!-- 슬릭 -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+    <script src="slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.title_slick').slick({
+                autoplay: true,
+                infinite: true,
+                dots: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplayspeed: 800
+            });
+            $('.ppl_slick').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            });
+            $('.item_slick').slick({
+                infinite: false,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                autoplayspeed: 800,
+                variableWidth: true,
+            });
+            $('.last_slick').slick({
+                dots: true,
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                autoplayspeed: 800,
+                responsive: [
+                {
+                  breakpoint: 890,
+                  settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 2
+                  }
+                },
+                {
+                  breakpoint: 560,
+                  settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                  }
+                }
+              ]
+            });
+            $('.mobilefooter_slick').slick({
+                dots: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplayspeed: 800
+            });
+            
+            // 타이틀 아코디언 메뉴
+                // 1. 마우스 올리기 전까진 노출되지 않게 다 숨기기
+                $("header .wrap nav .wgnb").hide();
+                // 2. 마우스 올렸을 때 해당 메뉴 노출시키기
+                let n;
+                $("header .wrap nav .sec .head ul.menu li").mouseenter(function(){
+                    n=$(this).index();
+                    $("header .wrap nav .wgnb:eq("+n+")").slideDown();
+                    $("header .wrap nav .wgnb").not(".wgnb:eq("+n+")").hide();
+                });
+                $("section#title").mouseenter(function(){
+                    $("header .wrap nav .wgnb:eq("+n+")").slideUp();
+                });
+
+            // main 리스트 아코디언 메뉴
+            // 1. 메뉴a만 나오고 나머지 다 hide 시키기
+            $(".item_b, .item_c, .item_d, .item_e").hide();
+            $("#main_a .wrap .stuff div.item_a article").show();
+            // 2. 메뉴 클릭하면 해당 리스트 나오는 이벤트 설정하기
+            $("#main_a .wrap ul.list li a").click(function(){
+                $("#main_a .wrap .stuff > div:nth-child("+($(this).parent().index()+1)+")").show();
+                $("#main_a .wrap .stuff > div ").not("div:nth-child("+($(this).parent().index()+1)+")").hide();
+                return false;
+            });
+
+            // main_a price hover
+            // $("#main_a .wrap .stuff article span.buy").hide();
+            // $("#main_a .wrap .stuff article").mouseenter(function(){
+            //    $(this).find("span.buy a").show();
+            // });
+            // $("#main_a .wrap .stuff article").mouseleave(function(){
+            //    $(this).find("span.buy a").hide();
+            // });
+
+
+            // main_e 클릭 페이지 쇼 슬라이드 
+            $("#main_e .wrap .textbox ul li p").hide(); 
+            $("#main_e .wrap .textbox ul li:nth-child(1) p").show();
+            $("#main_e .wrap .textbox ul li span").click(function(){
+                $(this).next().slideToggle();
+                $(this).parents("li").siblings().find("p").slideUp();
+                $(this).parent().parent().siblings().children().children("p").slideUp();
+            });
+
+            // 이미지 동시에 보여지게  
+            $("#main_e .wrap .textbox ul li:nth-child(1)").click(function(){
+                $("#main_e .wrap .imgbox img:nth-child(1)").fadeIn();
+                $("#main_e .wrap .imgbox img").not("#main_e .wrap .imgbox img:nth-child(1)").hide();
+            });
+            $("#main_e .wrap .textbox ul li:nth-child(2)").click(function(){
+                $("#main_e .wrap .imgbox img:nth-child(2)").fadeIn();
+                $("#main_e .wrap .imgbox img").not("#main_e .wrap .imgbox img:nth-child(2)").hide();
+            });
+            $("#main_e .wrap .textbox ul li:nth-child(3)").click(function(){
+                $("#main_e .wrap .imgbox img:nth-child(3)").fadeIn();
+                $("#main_e .wrap .imgbox img").not("#main_e .wrap .imgbox img:nth-child(3)").hide();
+            });
+            $("#main_e .wrap .textbox ul li:nth-child(4)").click(function(){
+                $("#main_e .wrap .imgbox img:nth-child(4)").fadeIn();
+                $("#main_e .wrap .imgbox img").not("#main_e .wrap .imgbox img:nth-child(4)").hide();
+            });
+            $("#main_e .wrap .textbox ul li:nth-child(5)").click(function(){
+                $("#main_e .wrap .imgbox img:nth-child(5)").fadeIn();
+                $("#main_e .wrap .imgbox img").not("#main_e .wrap .imgbox img:nth-child(5)").hide();
+            });
+
+        });
+
+    </script>
+
+    <!-- 페이지 슬라이딩, 사이트 도트 -->
+    <link rel="stylesheet" href="css/timelinenav.css">
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+    <script src="js/smoothscroll.js"></script>
+
+</head>
+<body>
+    <!-- 상단영역 -->
+    <header>
+        <div class="wrap">
+            <nav>
+                <ul class="top flex">
+                    <li>10% Off all orders + Free US Ground Shipping on orders $199 or more. Use code <span>BK2SCHOOL</span> at checkout. *</li>
+                    <li><a href="">Details & exclusions</a></li>
+                    <li><a href="">Special Offers</a></li>
+                </ul>
+                <ul class="mobile_top">
+                    <li>FREE US GROUND SHIPPING ON ORDERS $199 OR MORE. USE CODE FREESHIP. * <a href="">Details & exclusions</a></li>
+                    <li><a href="">Special Offers</a></li>
+                </ul>
+                <div class="sec flex">
+                    <div class="head flex">
+                        <h1>logo</h1>
+                        <ul class="menu flex">
+                            <li><a href="">Color Tools</a></li>
+                            <li><a href="">MarketPlace</a></li>
+                            <li><a href="">Learn</a></li>
+                            <li><a href="">Services</a></li>
+                            <li class="search"><a href="">search</a></li>
+                        </ul>
+                    </div>
+                    <div class="sub flex">
+                        <ul class="sub flex">
+                            <li><a href="">panton</a></li>
+                            <li><a href="">language</a></li>
+                            <li><a href="">personal</a></li>
+                            <li><a href="">cart</a></li>
+                        </ul>
+                    </div>
+                    <div class="mobile_sub">
+                        <ul class="mo_head">
+                            <li class="ham"><a href="">ham</a></li>
+                            <li class="search"><a href="" >search</a></li>
+                        </ul>
+                        <ul class="mo_sub">
+                            <li><a href="">personal</a></li>
+                            <li><a href="">cart</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- color tools 메뉴리스트 -->
+                <div class="wgnb">  
+                    <div class="wsub flex uppercase">
+                        <ul>
+                            <li><a href="">Shop All Color Tools</a></li>
+                            <li><a href="">Special Offers</a></li>
+                        </ul>
+                        <ul>
+                            <li class="strong">Physical Color Tools</li>
+                            <li><a href="">Graphics</a></li>
+                            <li><a href="">Fashion, Home + Interiors</a></li>
+                            <li><a href="">Plastics</a></li>
+                            <li><a href="">Munsell</a></li>
+                            <li><a href="">Devices</a></li>
+                            <li><a href="">Trend Books + Publications</a></li>
+                            <li><a href="">Replacement Parts</a></li>
+                        </ul>
+                        <ul>
+                            <li class="strong">Digital Color Tools</li>
+                            <li><a href="">Pantone Connect</a></li>
+                            <li><a href="">PantoneLIVE</a></li>
+                            <li><a href="">Pantone Validated</a></li>
+                            <li><a href="">Dyestuff Formulations</a></li>
+                        </ul>
+                        <span class="pipe"></span>
+                        <ul class=" best flex">
+                            <li class="strong">Best Sellers</li>
+                            <li><a href="#"><img src="img/menu_1.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="img/menu_2.jpg" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="wgnb">  
+                    <div class="wsub flex uppercase">
+                        <ul>
+                            <li><a href="">Shop All Collections</a></li>
+                            <li><a href="">Special Offers</a></li>
+                        </ul>
+                        <ul>
+                            <li class="strong">>Collections</li>
+                            <li><a href="">Lifestyle</a></li>
+                            <li><a href="">Color of the Year</a></li>
+                        </ul>
+                        <span class="pipe"></span>
+                        <ul class="best flex">
+                            <li class="strong">Best Sellers</li>
+                            <li><a href=""><img src="img/menu_3.jpg" alt=""></a></li>
+                            <li><a href=""><img src="img/menu_4.jpg" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="wgnb">  
+                    <div class="wsub flex uppercase">
+                        <ul>
+                            <li class="strong"><strong><a href="">2023 Color of the Year</a></strong></li>
+                            <li><a href="">2022 Color of the Year</a></li>
+                            <li><a href="">Past Colors of the Year</a></li>
+                        </ul>
+                        <ul>
+                            <li class="strong">Articles</li>
+                            <li><a href="">Product SpotlightGraphics</a></li>
+                            <li><a href="">Case STUDIES</a></li>
+                            <li><a href="">Technical</a></li>
+                            <li><a href="">Press</a></li>
+                            <li><a href="">Colors</a></li>
+                            <li><a href="">Color Palettes</a></li>
+                            <li><a href="">Fashion Color Trend Report</a></li>
+                        </ul>
+                        <ul>
+                            <li class="strong">Events</li>
+                            <li><a href="">Upcoming Events</a></li>
+                        </ul>
+                        <span class="pipe"></span>
+                    </div>
+                </div>
+                <div class="wgnb">  
+                    <div class="wsub flex uppercase">
+                        <ul>
+                            <li class="strong">Pantone Color Institute</li>
+                            <li><a href="">About PCI</a></li>
+                            <li><a href="">Color Consulting Services</a></li>
+                            <li><a href="">Custom Color Solutions</a></li>
+                            <li><a href="">Trend Forecasts + Reports</a></li>
+                        </ul>
+                        <ul>
+                            <li class="strong">Licensing</li>
+                            <li><a href="">Contact Licensing</a></li>
+                            <li><a href="">Consumer Products</a></li>
+                            <li><a href="">Color Displays</a></li>
+                            <li><a href="">Color Printers</a></li>
+                            <li><a href="">Colored Materials</a></li>
+                            <li><a href="">Software + Web</a></li>
+                            <li><a href="">Pantone Validated</a></li>
+                        </ul>
+                        <span class="pipe"></span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- 타이틀영역 -->
+    <section id="title">
+        <div class="wrap">
+            <h2>banner images</h2>
+            <div class="click">
+                <ul class="new title_slick">
+                    <li class="new_one"><a href=""></a></li>
+                    <li class="new_two"><a href=""></a></li>
+                    <li class="new_three"><a href=""></a></li>
+                    <li class="new_four"><a href=""></a></li>
+                    <li class="new_five"><a href=""></a></li>
+                </ul>
+            </div>
+            <ul class="ad flex">
+                <li>10% Off all orders + Free US Ground Shipping on orders $199 or more. Use code <span>BK2SCHOOL</span> at checkout.  <a href="">  Exclusions apply</a> *</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 내용영역 -->
+    <main>
+        <section id="main_a">
+            <div class="wrap padding50">
+                <h2>Featured Products</h2>
+                <ul class="list flex">
+                    <li><a href="">Graphic + Digital</a></li>
+                    <li><a href="">Fashion, Home + Interiors</a></li>
+                    <li><a href="">Munsell</a></li>
+                    <li><a href="">LifeStyle</a></li>
+                    <li><a href="">Plastics</a></li>
+                </ul>
+                <div class="stuff">
+                    <div class="item_a flex item_slick">
+                        <article>
+                            <a href="" class="more">
+                                <img src="https://www.pantone.com/media/catalog/product/f/o/formula-guide-cel.jpg?quality=95&height=307&width=307&canvas=307:307" alt="">
+                                <h3>Formula Guide + Pantone Connect Bundle</h3>
+                            </a>
+                            <span class="price">$ 244.80</span>
+                            <span class="buy">
+                                <a href="" class="like">like</a>
+                                <a href="" class="add">ADD TO CART</a>
+                            </span>
+                        </article>
+                        <article>
+                            <a href="" class="more">
+                                <img src="https://www.pantone.com/media/catalog/product/g/p/gp1601b-pantone-pms-formula-guide-coated-uncoated-product-1.jpg?quality=95&height=307&width=307&canvas=307:307" alt="">
+                                <h3>Pantone Formula Guide | Coated & Uncoated</h3>
+                            </a>
+                            <p>$ 217.00</p>
+                            <span class="buy">
+                                <a href="" class="like">like</a>
+                                <a href="" class="add">ADD TO CART</a>
+                            </span>
+                        </article>
+                        <article>
+                            <a href="" class="more">
+                                <img src="https://www.pantone.com/media/catalog/product/g/b/gb1504b-pantone-pms-spot-colors-chip-book-pastels-and-neons-coated-uncoated-product-1.jpg?quality=95&height=307&width=307&canvas=307:307" alt="">
+                                <h3>Pastels & Neons Chips | Coated & Uncoated</h3>
+                            </a>
+                            <p>$ 272.00</p>
+                            <span class="buy">
+                                <a href="" class="like">like</a>
+                                <a href="" class="add">ADD TO CART</a>
+                            </span>
+                        </article>
+                        <article>
+                            <a href="" class="more">
+                                <img src="https://www.pantone.com/media/catalog/product/g/b/gb1507b-pantone-graphics-pms-metallic-chips-book-product-2_1500x1500.jpg?quality=95&height=307&width=307&canvas=307:307" alt="">
+                                <h3>Metallic Chips Book</h3>
+                            </a>
+                            <p>$ 423.00</p>
+                            <span class="buy">
+                                <a href="" class="like">like</a>
+                                <a href="" class="add">ADD TO CART</a>
+                            </span>
+                        </article>
+                        <article>
+                            <a href="" class="more">
+                                <img src="https://www.pantone.com/media/catalog/product/g/p/gp1605b-pantone-graphics-plus-series-pms-spot-colors-solid-guide-set-1.jpg?quality=95&height=307&width=307&canvas=307:307" alt="">
+                                <h3>Solid Guide Set</h3>
+                            </a>
+                            <p>$ 466.00</p>
+                            <span class="buy">
+                                <a href="" class="like">like</a>
+                                <a href="" class="add">ADD TO CART</a>
+                            </span>
+                        </article>
+                        <article>
+                            <a href="" class="more">
+                                <img src="https://www.pantone.com/media/catalog/product/g/p/gp6102b-pantone-graphics-color-bridge-coated-uncoated-guides-product-2.jpg?quality=95&height=307&width=307&canvas=307:307" alt="">
+                                <h3>Pantone Color Bridge Guide Set | Coated & Uncoated</h3>
+                            </a>
+                            <p>$ 436.00</p>
+                            <span class="buy">
+                                <a href="" class="like">like</a>
+                                <a href="" class="add">ADD TO CART</a>
+                            </span>
+                        </article>
+                    </div>
+                    <div class="item_b flex item_slick">
+                        <article>
+                            <a href="" class="more">
+                                <img src="https://www.pantone.com/media/catalog/product/f/h/fhic200a-pantone-fashion-home-and-interiors-portable-cotton-swatches-passport-2.jpg?quality=95&height=307&width=307&canvas=307:307" alt="">
+                                <h3>Fashion, Home + Interiors Cotton Passport</h3>
+                            </a>
+                            <p>$ 749.00</p>
+                            <span class="buy">
+                                <a href="" class="like">like</a>
+                                <a href="" class="add">ADD TO CART</a>
+                            </span>
+                        </article>
+                        <article>
+                            <a href="" class="more">
+                                <img src="https://www.pantone.com/media/catalog/product/f/h/fhip110a-pantone-fashion-home-and-interiors-tpg-colors-on-paper-fan-deck-color-guide-3.jpg?quality=95&height=307&width=307&canvas=307:307" alt="">
+                                <h3>Fashion, Home + Interiors Color Guide Book</h3>
+                            </a>
+                            <p>$ 260.00</p>
+                            <span class="buy">
+                                <a href="" class="like">like</a>
+                                <a href="" class="add">ADD TO CART</a>
+                            </span>
+                        </article>
+                        <article>
+                            <a href="" class="more">
+                                <img src="https://www.pantone.com/media/catalog/product/f/h/fhip610a-pantone-fashion-home-interiors-paper-traveler-1_1.jpg?quality=95&height=307&width=307&canvas=307:307" alt="">
+                                <h3>Fashion, Home + Interiors Paper Traveler</h3>
+                            </a>
+                            <p>$ 375.00</p>
+                            <span class="buy">
+                                <a href="" class="like">like</a>
+                                <a href="" class="add">ADD TO CART</a>
+                            </span>
+                        </article>
+                        <article>
+                            <a href="" class="more">
+                                <img src="https://www.pantone.com/media/catalog/product/f/h/fhi-color-guide-cel_1.jpg?quality=95&height=307&width=307&canvas=307:307" alt="">
+                                <h3>FASHION, HOME + INTERIORS COLOR GUIDE + PANTONE CONNECT BUNDLE</h3>
+                            </a>
+                            <p>$ 349.99<span>$ 279.20</span></p>
+                            <span class="buy">
+                                <a href="" class="like">like</a>
+                                <a href="" class="add">ADD TO CART</a>
+                            </span>
+                        </article>
+                        <article>
+                            <a href="" class="more">
+                                <img src="https://www.pantone.com/media/catalog/product/p/a/pantone-fhi-beauty-bundle-1-updated.jpg?quality=95&height=307&width=307&canvas=307:307" alt="">
+                                <h3>Pantone Beauty Bundle</h3>
+                            </a>
+                            <p>$ 574.50<span>$ 449.99</span></p>
+                            <span class="buy">
+                                <a href="" class="like">like</a>
+                                <a href="" class="add">ADD TO CART</a>
+                            </span>
+                        </article>
+                    </div>
+                    <div class="item_c flex item_slick">
+                        <article>
+                            <a href="" class="more">
+                                <img src="https://www.pantone.com/media/catalog/product/1/-/1-pttc100-pantone-pms-pluse-series-plastic-chips-white-gray-black-tins-and-tones-collection-product-1_2.jpg?quality=95&height=307&width=307&canvas=307:307" alt="">
+                                <h3>The Pantone Tints and Tones Collection</h3>
+                            </a>
+                            <p>$ 1,051.00</p>
+                        </article>
+                        <article>
+                            <a href="" class="more">
+                                <img src="https://www.pantone.com/media/catalog/product/1/-/1-m50215b-munsell-soil-color-book-product-1_2.jpg?quality=95&height=307&width=307&canvas=307:307" alt="">
+                                <h3>Munsell Soil Color Book</h3>
+                            </a>
+                            <p>$ 275.00</p>
+                        </article>
+                        <article>
+                            <a href="" class="more">
+                                <img src="https://www.pantone.com/media/catalog/product/1/-/1-m50315b-munsell-rock-color-book-product-1_2.jpg?quality=95&height=307&width=307&canvas=307:307" alt="">
+                                <h3>Munsell Rock Color Book</h3>
+                            </a>
+                            <p>$ 165.00</p>
+                        </article>
+                        <article>
+                            <a href="" class="more">
+                                <img src="https://www.pantone.com/media/catalog/product/p/a/pantone-plastics-color-family-carousels-group.jpg?quality=95&height=307&width=307&canvas=307:307" alt="">
+                                <h3>Plastic Chip Color Sets</h3>
+                            </a>
+                            <p>$ 1,082.00</p>
+                        </article>
+                    </div>
+                    <div class="item_d flex item_slick">
+                        <article>
+                            <a href="" class="more">
+                                <img src="https://www.pantone.com/media/catalog/product/2/0/2020-005-pantone-pride-mug-1_1_1.jpg?quality=95&height=307&width=307&canvas=307:307" alt="">
+                                <h3>Pantone Mug - Pride</h3>
+                            </a>
+                            <p>$ 30.00</p>
+                        </article>
+                        <article>
+                            <a href="" class="more">
+                                <img src="https://www.pantone.com/media/catalog/product/2/0/2020-007-pantone-tritan-bottle-pride_1.jpg?quality=95&height=307&width=307&canvas=307:307" alt="">
+                                <h3>Pantone Tritan Drinking Bottle - Pride</h3>
+                            </a>
+                            <p>$ 33.00</p>
+                        </article>
+                        <article>
+                            <a href="" class="more">
+                                <img src="https://www.pantone.com/media/catalog/product/p/a/pantone-lifestyle-hip-flasks.jpg?quality=95&height=307&width=307&canvas=307:307" alt="">
+                                <h3>Pantone Hip Flask</h3>
+                            </a>
+                            <p>$ 30.00</p>
+                        </article>
+                        <article>
+                            <a href="" class="more">
+                                <img src="https://www.pantone.com/media/catalog/product/1/0/101032022-pantone-mug-color-of-the-year-very-peri-1.jpg?quality=95&height=307&width=307&canvas=307:307" alt="">
+                                <h3>Limited Edition Mug, Pantone Color of the Year 2022</h3>
+                            </a>
+                            <p>$ 25.00</p>
+                        </article>
+                        <article>
+                            <a href="" class="more">
+                                <img src="https://www.pantone.com/media/catalog/product/p/a/pantone-lifestyle-erasers.jpg?quality=95&height=307&width=307&canvas=307:307" alt="">
+                                <h3>Pantone Eraser</h3>
+                            </a>
+                            <p>$ 6.00</p>
+                        </article>
+                    </div>
+                    <div class="item_e flex item_slick">
+                        <article>
+                            <a href="" class="more">
+                                <img src="https://www.pantone.com/media/catalog/product/1/-/1-pttc100-pantone-pms-pluse-series-plastic-chips-white-gray-black-tins-and-tones-collection-product-1_2.jpg?quality=95&height=307&width=307&canvas=307:307" alt="">
+                                <h3>The Pantone Tints and Tones Collection</h3>
+                            </a>
+                            <p>$ 1,051.00</p>
+                        </article>
+                        <article>
+                            <a href="" class="more">
+                                <img src="https://www.pantone.com/media/catalog/product/p/a/pantone-plastics-color-family-carousels-group.jpg?quality=95&height=307&width=307&canvas=307:307" alt="">
+                                <h3>Plastic Chip Color Sets</h3>
+                            </a>
+                            <p>$ 1,082.00</p>
+                        </article>
+                    </div>
+                </div>
+                <a href="" class="button">SHOP ALL</a>
+            </div>
+        </section>
+        <section id="main_b">
+            <div class="wrap">
+                <div class="container">
+                    <div class="list">
+                        <a href="">
+                            <div class="imgbox">
+                                <img src="img/main_b_1.jpg" alt="">
+                            </div>
+                            <div class="textbox_a">
+                                <h3>Fashion, Home + Interiors</h3>
+                                <p>Where inspiration and color accuracy meet.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="list">
+                        <a href="">
+                            <div class="imgbox">
+                                <img src="img/main_b_2.jpg" alt="">
+                            </div>
+                            <div class="textbox_b">
+                                <h3>Graphics + Digital Design</h3>
+                                <p>Get Color right with Pantone Colors for Print, Packaging & Digital Design.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="list">
+                        <a href="">
+                            <div class="imgbox">
+                                <img src="img/main_b_3.jpg" alt="">
+                            </div>
+                            <div class="textbox_c">
+                                <h3>Munsell</h3>
+                                <p>Explore products applying the authoritative Munsell Color Standard.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="list">
+                        <a href="">
+                            <div class="imgbox">
+                                <img src="img/main_b_4.jpg" alt="">
+                            </div>
+                            <div class="textbox_d">
+                                <h3>Plastics</h3>
+                                <p>Find the perfect color with Pantone Plastic Chips and Towers.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="main_c">
+            <div class="wrap flex padding50">
+                <div class="txt">
+                    <h3>Meet Our Color Experts</h3>
+                    <p>Our color experts serve clients all around the world,<span class="block"></span> touching every creative discipline and every level of the marketplace.</p>
+                </div>
+                <ul class="list flex">
+                    <li class="pp1_one">Lan Vu
+                        <p>Trend Forecaster</p>
+                    </li>
+                    <li class="pp1_two">Leatrice Eiseman
+                        <p>Executive Director</p>
+                    </li>
+                    <li class="pp1_three">Michael Nolte
+                        <p>Color Forecaster</p>
+                    </li>
+                    <li class="pp1_four">Tod Schulman
+                        <p>Creative Director</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="mobile_c">
+            <div class="wrap flex padding50">
+                <div class="txt">
+                    <h3>Meet Our Color Experts</h3>
+                    <p>Our color experts serve clients all around the world,<span class="block"></span> touching every creative discipline and every level of the marketplace.</p>
+                </div>
+                <ul class="list flex ppl_slick">
+                    <li class="pp1_one">Lan Vu
+                        <p>Trend Forecaster</p>
+                    </li>
+                    <li class="pp1_two">Leatrice Eiseman
+                        <p>Executive Director</p>
+                    </li>
+                    <li class="pp1_three">Michael Nolte
+                        <p>Color Forecaster</p>
+                    </li>
+                    <li class="pp1_four">Tod Schulman
+                        <p>Creative Director</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="main_d">
+            <div class="wrap flex">
+                <h2>About our company</h2>
+                <img src="img/main_d_1.jpg" alt="">
+                <div class="content">
+                    <div class="txt_d">
+                        <img src="img/main_d_2.jpg" alt="">
+                        <p>Recognized globally as a leading source of color expertise, Pantone Color Institute provides color insights and solutions; collaborating with our clients to strategically address color challenges and develop a color and design approach consistent with their brand vision.</p>
+                        <a href="" class="button">LEARN MORE</a>
+                    </div>
+                    <ul class="logo flex">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="main_e">
+            <div class="wrap">
+                <h2>Meet Pantone Connect</h2>
+                <div class="total">
+                    <div class="imgbox">
+                        <img src="img/main_f_1.webp" alt="" class="main">
+                        <img src="img/main_f_2.webp" alt="" class="main hide">
+                        <img src="img/main_f_3.webp" alt="" class="main hide">
+                        <img src="img/main_f_4.webp" alt="" class="main hide">
+                        <img src="img/main_f_5.webp" alt="" class="main hide">
+                    </div>
+                    <div class="textbox">
+                        <ul>
+                            <li>
+                                <img src="img/pick.svg" alt="" class="icon">
+                                <span>Pick</span>
+                                <p>Select the colors you find and save them to your palettes for use in all of your design workflows. New, trending colors added almost every year.</p>
+                            </li>
+                            <li>
+                                <img src="img/extract.svg" alt="" class="icon">
+                                <span>Extract</span>
+                                <p>Isolate any color you see in a digital file to identify the nearest Pantone color match and build your own palettes.</p>
+                            </li>
+                            <li>
+                                <img src="img/convert.svg" alt="" class="icon">
+                                <span>Convert</span>
+                                <p>Find the nearest RGB/CMYK/Hex/L*a*b* color equivalents to Pantone colors or convert Pantone colors to their nearest equivalents in another.</p>
+                            </li>
+                            <li>
+                                <img src="img/measure.svg" alt="" class="icon">
+                                <span>Measure</span>
+                                <p>Pair the Pantone Color Match Card with the Pantone Connect Mobile App to capture color inspiration wherever you find it</p>
+                            </li>
+                            <li>
+                                <img src="img/color.svg" alt="" class="icon">
+                                <span>Color Story</span>
+                                <p>Create custom collages of one, three, or five images and sample isolated colors to express your own unique color story.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="main_f">
+            <div class="wrap">
+                <h2>Explore Pantone</h2>
+                <ul class="list last_slick flex">
+                    <li class="g_one">
+                        <a href="">
+                            <h3>THE MANY SHADES OF STORYTELLING</h3>
+                            <span>GO TO PRODUCT SPOTLIGHT</span>
+                        </a>
+                    </li>
+                    <li class="g_two">
+                        <a href="">
+                            <h3>City Park Golden Brass: Symbolic Of A Place to Call Home</h3>
+                            <span>GO TO CASE STUDIES</span>
+                        </a>
+                    </li>
+                    <li class="g_three">
+                        <a href="">
+                            <h3>The Nuanced Beauty Of Natural Color</h3>
+                            <span>GO TO COLORS</span>
+                        </a>
+                    </li>
+                    <li class="g_four">
+                        <a href="">
+                            <h3>Essential Post-Pandemic Reference Tools for Home And Office</h3>
+                            <span>GO TO TECHNICAL</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <!-- 하단영역 -->
+    <footer>
+        <div class="wrap padding50">
+            <div class="first">
+                <h2>Are you a Pantone member?</h2>
+                <p class="p">To take advantage of your Pantone member perks,<a href=""> sign in. </a></p>
+                <p class="p">Not a member?<a href=""> Join today. </a></p>
+            </div>
+            <nav class="second flex">
+                <h3>ABOUT US</h3>
+                <ul>
+                    <li><a href="#">ABOUT PANTONE</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                    <li><a href="#">CAREERS</a></li>
+                </ul>
+                <h3>CUSTOMER SERVICE</h3>
+                <ul>
+                    <li><a href="#">HELP CENTER</a></li>
+                    <li><a href="#">PRODUCT REGISTRATION</a></li>
+                    <li><a href="#">SOFTWARE DOWNLOADS</a></li>
+                    <li><a href="#">TRADE-IN PROGRAM</a></li>
+                    <li><a href="#">SHIPPING POLICY</a></li>
+                    <li><a href="#">RETURN POLICY</a></li>
+                    <li><a href="#">COOKIE SETTINGS</a></li>
+                </ul>
+            </nav>
+            <div class="third">
+                <ul class="logo">
+                    <li><img src="img/logo_white.webp" alt="Panton Logo"><span>panton logo img</span></li>
+                    <li><img src="img/xrite.webp" alt="Xrite Logo"><span>xrite logo img</span></li>
+                </ul>
+                <nav class="social">
+                    <h3>FOLLOW US</h3>
+                    <ul class="flex">
+                        <li><a href="#"><img src="img/instagram_1.jpg" alt="Instagram"></a></li>
+                        <li><a href="#"><img src="img/facebook_1.jpg" alt="Facebook"></a></li>
+                        <li><a href="#"><img src="img/Pinterest.jpg" alt="Pinterest"></a></li>
+                        <li><a href="#"><img src="img/twitter_1.jpg" alt="Twitter"></a></li>
+                        <li><a href="#"><img src="img/linkedin_1.jpg" alt="LinkedIn"></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="bottom">
+                <address>Pantone LLC is a wholly owned subsidiary of X-Rite, Incorporated. © Pantone LLC,  1995 - 2023 . All rights reserved.</address>
+                <p class="last flex">
+                    <a href="">Terms of Use</a>
+                    <span class="pipe">ㅣ</span>
+                    <a href="">Privacy Policy</a>
+                    <span class="pipe">ㅣ</span>
+                    <a href="">Cookie Notice</a>
+                    <span class="pipe">ㅣ</span>
+                    <a href="">Do Not Sell or Share My Data</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

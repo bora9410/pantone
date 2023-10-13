@@ -1,0 +1,66 @@
+#main_b {
+
+}
+#main_b .wrap{
+    width: 1280px;
+}
+#main_b .wrap .container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    padding: 50px 0;
+    position: relative;
+}
+#main_b .wrap .container .list {
+    width: 630px;
+    height: 186px;
+    margin-bottom: 21px;
+    margin-right: 17px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+#main_b .wrap .container .list a {
+
+}
+#main_b .wrap .container .list a .imgbox {
+    transition: transform 0.3s;
+}
+#main_b .wrap .container .list a .imgbox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s ease 0s;
+}
+#main_b .wrap .container .list:hover a .imgbox img{
+    transform: scale(1.1);
+}
+#main_b .wrap .container .list a .textbox_a {
+    position: absolute;
+    top: 5px;
+        
+}
+#main_b .wrap .container .list a .textbox_b {
+    position: absolute;
+    top: 5px;
+}
+#main_b .wrap .container .list a .textbox_c {
+    position: absolute;
+    top: 5px;
+}
+#main_b .wrap .container .list a .textbox_d {
+    position: absolute;
+    top: 5px;
+}
+#main_b .wrap .container .list a div h3 {
+    margin: 40px 0 0 40px;
+    color: #fff;
+    font-size: 32px;
+    font-weight: 800;
+}
+#main_b .wrap .container .list a div p {
+    margin: 15px 120px 0 40px;
+    color: #fff;
+    line-height: 1.5;
+    font-size: 16px;
+}

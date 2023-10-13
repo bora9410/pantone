@@ -1,0 +1,175 @@
+header {
+}
+header .wrap {
+  width: 100%;
+  position: relative;
+}
+header .wrap nav{
+}
+header .wrap nav ul.top {
+  justify-content: center;
+  background-color: black;
+  color: white;
+  font-size: 13px;
+  padding: 12px 0;
+  text-transform: uppercase;
+}
+header .wrap nav ul.top li {
+  padding-right: 5px;
+}
+header .wrap nav ul.top li:nth-of-type(2) {
+  border-right: 1px solid white;
+  padding-right: 13px;
+}
+header .wrap nav ul.top li:nth-of-type(3) {
+  padding-left: 13px;
+}
+header .wrap nav ul.top li span {
+  font-weight: 900;
+}
+header .wrap nav ul.top li a {
+  color: white;
+}
+/* 모바일버전 */
+header .wrap nav .mobile_top{
+  display: none;
+}
+
+header .wrap nav .sec{
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-top: 13px;
+  padding-bottom: 20px;
+  justify-content: space-between;
+  align-items: end;
+}
+header .wrap nav .sec .head {
+  gap: 50px;
+}
+header .wrap nav .sec .head h1 {
+  background-image: url(../img/logo.jpg);
+  font-size: 0;
+  width: 128px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+header .wrap nav .sec .head ul.menu {
+  text-transform: uppercase;
+  gap: 20px;
+  align-items: center;
+}
+header .wrap nav .sec .head ul.menu li {
+  font-size: 15px;
+  font-weight: 600;
+}
+header .wrap nav .sec .head ul.menu li.search a{
+  font-size: 0;
+  background-image: url(../img/search.svg);
+  width: 25px;
+  height: 25px;
+  background-size: cover;
+  display: inline-block;
+  vertical-align: 14px;
+}
+header .wrap nav .sec .head ul.menu li a {
+  
+}
+header .wrap nav .sec .head ul.menu li a:not(.search a)::after {
+  content: "";
+  border-bottom: 2px solid black;
+  display: block;
+  margin-top: 10px;
+  opacity: 0;
+  transition: all 0.3s ease-in 0s;
+}
+header .wrap nav .sec .head ul.menu li a:not(.search a):hover::after {
+  opacity: 1;
+}
+header .wrap nav .sub{ 
+}
+header .wrap nav .sub ul.sub {
+  gap: 20px;
+  align-items: center;
+}
+header .wrap nav .sub ul.sub li {
+
+}
+header .wrap nav .sub ul.sub li a {
+  font-size: 0;
+  width: 27px;
+  height: 27px;
+  display: inline-block;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+header .wrap nav .sub ul.sub li:nth-of-type(1) a{
+  width: 115px;
+  height: 32px;
+  background-image: url(../img/logo_head.jpg);
+}
+header .wrap nav .sub ul.sub li:nth-of-type(2) a{
+  background-image: url(../img/language.svg);
+}
+header .wrap nav .sub ul.sub li:nth-of-type(3) a{
+  background-image: url(../img/account.svg);
+}
+header .wrap nav .sub ul.sub li:nth-of-type(4) a{
+  background-image: url(../img/cart.svg);
+}
+/* 모바일 버전 */
+header .wrap nav .mobile_sub{
+  display: none;
+}
+
+/* 메뉴 리스트 */
+strong{
+  font-weight: 800;
+  font-size: 16px;
+}
+header .wrap nav .wgnb {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  background-color: white;
+}
+header .wrap nav .wgnb .wsub {
+  width: 1262px;
+  margin: 0 auto;
+  justify-content: flex-start;
+  padding-bottom: 40px;
+  font-size: 14px;
+  line-height: 1.9;
+}
+header .wrap nav .wgnb .wsub ul {
+  padding-right: 55px;
+}
+header .wrap nav .wgnb .wsub span{
+  border-right: 1px solid;
+}
+header .wrap nav .wgnb .wsub ul li.strong {
+  font-weight: 800;
+  font-size: 16px;
+}
+header .wrap nav .wgnb .wsub ul li {
+}
+header .wrap nav .wgnb .wsub ul li a {
+}
+header .wrap nav .wgnb .wsub ul li a:hover {
+  text-decoration: underline;
+}
+header .wrap nav .wgnb .wsub ul a{ 
+}
+header .wrap nav .wgnb .wsub ul.best{
+padding-right: 0;
+}
+header .wrap nav .wgnb .wsub ul.best li.strong{
+  font-weight: 800;
+  font-size: 16px;
+  margin: 0 25px;
+}
+header .wrap nav .wgnb .wsub ul.best li a img {
+  width: 168px;
+  height: 168px;
+  margin-left: 15px;
+}

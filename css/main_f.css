@@ -1,0 +1,107 @@
+#main_f {
+
+}
+#main_f .wrap {
+  width: 1280px;
+}
+#main_f .wrap h2 {
+  font-size: 32px;
+  font-weight: 800;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+#main_f .wrap ul.list {
+}
+#main_f .wrap ul.list li {
+  
+}
+#main_f .wrap ul.list li a {
+
+}
+#main_f .wrap ul.list li a::before {
+  content: "";
+  display: block;
+  width: 416px;
+  height: 308px;
+  background-size: cover;
+  background-position: center;
+  background-color: #eee;
+}
+#main_f .wrap ul.list li.g_one a::before{
+  background-image: url(../img/main_g_1.jpg);
+}
+#main_f .wrap ul.list li.g_two a::before{
+  background-image: url(../img/main_g_2.jpg);
+}
+#main_f .wrap ul.list li.g_three a::before{
+  background-image: url(../img/main_g_3.jpg);
+}
+#main_f .wrap ul.list li.g_four a::before{
+  background-image: url(../img/main_g_4.jpg);
+}
+#main_f .wrap ul.list li a h3 {
+  font-size: 23px;
+  line-height: 1.4;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-right: 50px;
+  text-decoration: underline;
+}
+#main_f .wrap ul.list li a span {
+  font-size: 14px;
+  font-weight: 600;
+}
+#main_f .wrap ul.list li a span:hover{
+  text-decoration: underline;
+}
+/* 슬릭 버튼 디자인 */
+#main_f .wrap ul.list ul.slick-dots li{
+  width: 13px;
+  height: 13px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: #eee;
+}
+#main_f .wrap ul.list ul.slick-dots li:hover{
+  background-color: black;
+}
+#main_f .wrap ul.list ul.slick-dots li button::before{
+  content: "";
+}
+
+/* 슬릭 버튼 디자인 */
+#main_f .wrap ul.list ul.slick-dots {
+  
+}
+#main_f .wrap ul.list ul.slick-dots li{
+  width: 13px;
+  height: 13px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: #eee;
+  padding: 0;
+}
+#main_f .wrap ul.list ul.slick-dots li:hover{
+  background-color: black;
+}
+#main_f .wrap ul.list ul.slick-dots li button::before{
+  content: "";
+}
+
+/* 모바일 슬릭 버튼 디자인 */
+#mobile_f .wrap ul.list ul.slick-dots {
+}
+#mobile_f .wrap ul.list ul.slick-dots li{
+  width: 13px;
+  height: 13px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: #eee;
+}
+#mobile_f .wrap ul.list ul.slick-dots li:hover{
+  background-color: black;
+}
+#mobile_f .wrap ul.list ul.slick-dots li button::before{
+  content: "";
+}
