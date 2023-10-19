@@ -105,26 +105,16 @@
     background-size: cover;
     height: 430px;
   }
-  section#title .wrap .click ul.new li a{
-    box-sizing: border-box;
-    background-size: cover;
+  section#title .wrap .click ul.new {
+    display: none;
+  }
+  section#title .wrap .click ul.newmo{
+    display: block;
+  }
+  section#title .wrap .click ul.newmo li a img{
+    width: 100%;
     height: 430px;
   }
-  section#title .wrap .click ul.new li.new_one a{
-    background-image: url(../img/mo.title_1.webp);
-  }
-  section#title .wrap .click ul.new li.new_two a{
-    background-image: url(../img/mo.title_2.webp);
-  }
-  section#title .wrap .click ul.new li.new_three a{
-    background-image: url(../img/mo.title_3.webp);
-  }  
-  section#title .wrap .click ul.new li.new_four a{
-    background-image: url(../img/mo.title_4.webp);
-  }  
-  section#title .wrap .click ul.new li.new_five a{
-    background-image: url(../img/mo.title_5.webp);
-  }  
   section#title .wrap ul.ad{
     display: inline-block;
     text-align: center;

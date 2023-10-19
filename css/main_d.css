@@ -54,6 +54,7 @@
   margin-top: 20px;
   width: 135px;
   height: 70px;
+  font-size: 0;
 }
 #main_d .wrap ul.logo li:nth-of-type(1) {
   background-image: url(../img/main_d_3.jpg);

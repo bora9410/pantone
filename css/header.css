@@ -46,13 +46,9 @@ header .wrap nav .sec{
 header .wrap nav .sec .head {
   gap: 50px;
 }
-header .wrap nav .sec .head h1 {
-  background-image: url(../img/logo.jpg);
-  font-size: 0;
+header .wrap nav .sec .head h1 a img {
   width: 128px;
   height: 20px;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 header .wrap nav .sec .head ul.menu {
   text-transform: uppercase;
