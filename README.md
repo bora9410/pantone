@@ -24,7 +24,7 @@
 
 ## 사용 프로그램
 - Visual Studio Code
-- SCSS
+- SASS
 - OpenWax (웹표준,접근성 진단)
 - CCA (색 명암 분석기)
 - W3C (마크업 검사)
