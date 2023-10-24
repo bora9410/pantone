@@ -65,12 +65,7 @@ footer .wrap .third ul.logo li{
 }
 footer .wrap .third ul.logo li img {
   width: 120px;
-}
-footer .wrap .third ul.logo li span{
-  visibility: hidden;
-}
-footer .wrap .third nav.social {
-
+  padding-right: 10px;;
 }
 footer .wrap .third nav.social h3 {
   line-height: 2;

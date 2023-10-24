@@ -6,7 +6,6 @@ section#title .wrap {
   /*! overflow: hidden; */
 }
 section#title .wrap h2{
-  visibility: hidden;
 }
 section#title .wrap .click{
   height: 520px;

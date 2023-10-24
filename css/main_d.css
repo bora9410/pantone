@@ -7,7 +7,6 @@
   padding-bottom: 20px;
 }
 #main_d .wrap h2{
-  visibility: hidden;
 }
 #main_d .wrap > img{
   width: 560px;
@@ -24,7 +23,6 @@
 
 }
 #main_d .wrap .txt_d p {
-
   font-size: 14px;
   line-height: 1.6;
   padding-bottom: 20px;
